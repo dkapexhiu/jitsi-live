@@ -1,0 +1,215 @@
+//variables
+$my-purple: rgb(143, 0, 245);
+$green: rgba(136, 194, 63, 0.5);;
+$orange: #F48E44;
+
+//mix-ins
+@mixin center-all {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+//selectors
+.main-container {
+  @include center-all;
+}
+@media only screen and (max-width: 450px) {
+  .main-container {
+    margin: 1rem auto 5rem auto;
+  }
+  .main-container:before {
+    width: 150%!important;
+  }
+}
+.main-container:before {
+  content: '';
+  height: 130vh;
+  width: 130%;
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: -100px;
+  right: 0px;
+  bottom: 0px;
+  left: -100px;
+  z-index: -1982;
+
+  mask-image: linear-gradient(to bottom,
+  rgba(0,0,0,0),
+  rgba(0,0,0,1),
+  rgba(0,0,0,1),
+  rgba(0,0,0,0));
+  opacity: 1;
+  filter: blur(12px);
+  transform: scale(1);
+}
+
+.myHR {
+  border-color: $my-purple;
+  animation: grow 1.25s steps(1250);
+}
+
+@media only screen and (max-width: 325px) {
+  .my-wrap {
+    width: 95vw!important;
+  }
+}
+.my-wrap {
+  @include center-all();
+  width: 40vw;
+  border: 1px solid transparent;
+  flex-direction: column;
+  font-size: 2rem;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+  border-radius: 0;
+  background-color: $green;
+  animation: grow 1.25s steps(1250);
+}
+@keyframes grow {
+  from {transform: scaleX(0); opacity: 0;}
+  to {transform: scaleX(1); opacity: 1;}
+}
+
+.my-ptag {
+  font-size: smaller;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #fff;
+}
+// ---------------input
+.my-input {
+  cursor: pointer;
+  caret-color: white;
+  font-size: 1.25rem;
+  color: white;
+  margin: 0.5rem;
+  padding: 0.25rem 0.25rem 0.25rem 1rem;
+  border-radius: 0.25rem;
+  border-color: $orange;
+  background-color: $orange;
+  transition: 0.75s;
+}
+.my-input::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
+.my-input:focus {
+  cursor: text;
+}
+.my-input:focus, .my-input:hover {
+  background-color: $green;
+  &::placeholder {
+    color: $orange;
+  }
+}
+// ------------end input
+.my-button {
+  margin: 1rem;
+  padding: 0.25rem 2rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid $orange;
+  color: rgba(255, 255, 255, 1);
+  background-color: $orange;
+  transition: 1s;
+}
+.my-button:hover {
+  color: white;
+  background-color: $green;
+  border-color: white;
+  > .connect::before, .connect::after {
+    color: $my-purple;
+    transform: scale(1.5);
+    animation: spin 0.55s ease-in-out;
+  }
+}
+.connect::before {
+  display: inline-block;
+  content: '\2234';
+}
+.connect::after {
+  display: inline-block;
+  content: '\2234';
+}
+@keyframes spin {
+  from {transform: scale(1) rotate(0deg);}
+  to {transform: scale(2) rotate(360deg);}
+}
+// 
+.my-name {
+  cursor: pointer;
+  font-size: small;
+  -webkit-box-reflect: below 5px linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.8));
+    transition: 2s;
+}
+.my-name:hover {
+  -webkit-box-reflect: below 5px linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.4));
+    >.goBack {
+      color:  $orange;
+    }
+}
+.goBack {
+  display: contents;
+}
+
+.video-full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.video-full__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.hidden-mobile {
+  display: block;
+  margin: 0px auto;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0%;
+}
+
+.row {
+  z-index: 10;
+}
+
+// jitsy container---
+#react-jitsi-container {
+  height: 100vh!important;
+  width: 100vw!important;
+  animation: grow 1.25s steps(1250);
+}
+#react-jitsi-frame {
+  animation: grow 1.25s steps(1250);
+}
+.jisti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
