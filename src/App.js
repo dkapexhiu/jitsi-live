@@ -37,7 +37,9 @@ const App = () => {
                 displayName={displayName}
                 loadingComponent={Loader}
                 onAPILoad={(JitsiMeetAPI) =>
-                  console.log("Good Morning everyone!", JitsiMeetAPI)
+                  JitsiMeetAPI.addEventListener("videoConferenceLeft", () => {
+                      window.location.href = "/jitsi-live/";
+                  })	                
                 }
                 config={{
                   prejoinPageEnabled: false,
