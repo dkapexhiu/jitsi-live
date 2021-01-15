@@ -23,9 +23,9 @@ const App = () => {
 
   return (
     <div className="container-fluid main-container">
-      <div id="video-full" class="video-full">
-          <div class="video-full__overlay"></div>
-          <iframe title="video" class="hidden-mobile" src="https://player.vimeo.com/video/454635435?background=1&amp;autoplay=1&amp;loop=1&amp;autopause=0&amp;muted=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      <div id="video-full" className="video-full">
+          <div className="video-full__overlay"></div>
+          <iframe title="video" className="hidden-mobile" src="https://player.vimeo.com/video/454635435?background=1&amp;autoplay=1&amp;loop=1&amp;autopause=0&amp;muted=1" frameBorder="0" webkitallowfullscreen="" mozallowfullscreen="" allowFullScreen=""></iframe>
       </div>
       <div className={onCall ? "row my-1" : "row my-5"}>
         <div className="col">
@@ -37,9 +37,7 @@ const App = () => {
                 displayName={displayName}
                 loadingComponent={Loader}
                 onAPILoad={(JitsiMeetAPI) =>
-                  JitsiMeetAPI.addEventListener("videoConferenceLeft", () => {
-                    window.location.href = "/jitsi-live/";
-                  })
+                  console.log("Good Morning everyone!", JitsiMeetAPI)
                 }
                 config={{
                   prejoinPageEnabled: false,
