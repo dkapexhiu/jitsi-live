@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6aaffcfb54338cfe5adf350b7d4b8c55",
+    "revision": "0e6bdb9b612311edfd761da4b575c994",
     "url": "/jitsi-live/index.html"
   },
   {
-    "revision": "17514fb4907a8969a447",
-    "url": "/jitsi-live/static/css/2.a3c1bd20.chunk.css"
+    "revision": "cd9528cec20b9d5120a6",
+    "url": "/jitsi-live/static/css/2.d84e65c5.chunk.css"
   },
   {
-    "revision": "302aa6e1ab23cbba85f7",
-    "url": "/jitsi-live/static/css/main.a21e9a87.chunk.css"
+    "revision": "5b9b23a4c8e63166fda8",
+    "url": "/jitsi-live/static/css/main.901450f0.chunk.css"
   },
   {
-    "revision": "17514fb4907a8969a447",
+    "revision": "cd9528cec20b9d5120a6",
     "url": "/jitsi-live/static/js/2.3deb37a5.chunk.js"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jitsi-live/static/js/2.3deb37a5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "302aa6e1ab23cbba85f7",
-    "url": "/jitsi-live/static/js/main.c39231a0.chunk.js"
+    "revision": "5b9b23a4c8e63166fda8",
+    "url": "/jitsi-live/static/js/main.c1f29cd8.chunk.js"
   },
   {
     "revision": "eb9ab22ef0b8483579dc",
