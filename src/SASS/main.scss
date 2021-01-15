@@ -188,10 +188,10 @@ $orange: #F48E44;
 .hidden-mobile {
   display: block;
   margin: 0px auto;
-  width: 100vw;
-  height: 100vh;
-  top: 0px;
-  left: 0%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .row {
@@ -212,4 +212,27 @@ $orange: #F48E44;
   top: 0;
   left: 0;
   z-index: 10;
+}
+
+@media all and (max-width: 480px){
+  .hidden-mobile {
+    display: none;
+  }  
+  .my-wrap {
+    width: 100vw;
+  }
+}
+
+@media all and (min-width: 1025px) and (max-width: 1366px){
+  .hidden-mobile {
+    width: 1366px;
+    height: 768px;
+  }  
+}
+
+@media all and (min-width: 1367px) and (max-width: 1920px){
+  .hidden-mobile {
+    width: 1920px;
+    height: 1080px;
+  }  
 }
